@@ -2,6 +2,7 @@ package cn.cestco.usercenter.injection.component
 
 import android.support.v7.app.AppCompatActivity
 import cn.cestco.usercenter.injection.module.UserModule
+import cn.cestco.usercenter.ui.activity.UserCenterActivity
 import dagger.Component
 
 /**
@@ -10,5 +11,5 @@ import dagger.Component
  */
 @Component(modules = arrayOf(UserModule::class))
 interface UserComponent {
-    fun inject(activity: AppCompatActivity)
+    fun inject(activity: UserCenterActivity)
 }
