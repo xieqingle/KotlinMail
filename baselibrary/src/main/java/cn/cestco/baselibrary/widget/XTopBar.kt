@@ -40,8 +40,6 @@ class XTopBar @JvmOverloads constructor(context: Context, attrs: AttributeSet? =
     init {
         mLeftView = mutableListOf()
         mRightView = mutableListOf()
-        
-
 
     }
 

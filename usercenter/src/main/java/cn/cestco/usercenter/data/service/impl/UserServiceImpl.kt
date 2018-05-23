@@ -4,15 +4,17 @@ import cn.cestco.usercenter.data.repository.UserRepository
 import cn.cestco.usercenter.data.service.UserService
 import io.reactivex.Observable
 import io.reactivex.functions.Function
+import javax.inject.Inject
 
 /**
  * 作者：RockQ on 2018/5/17
  * 邮箱：qingle6616@sina.com
  */
-class UserServiceImpl : UserService {
+class UserServiceImpl @Inject constructor() : UserService {
+    @Inject
+    lateinit var userRepository: UserRepository
 
     override fun register(mobile: String, verifyCode: String, pwd: String): Observable<Boolean> {
-        val userRepository = UserRepository()
         return userRepository.register(mobile, verifyCode, pwd)
                 .flatMap(Function { baseResp ->
                     if (baseResp.status != 0)

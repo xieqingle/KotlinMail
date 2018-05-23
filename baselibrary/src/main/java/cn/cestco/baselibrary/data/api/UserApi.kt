@@ -7,5 +7,5 @@ import retrofit2.http.Body
  * 邮箱：qingle6616@sina.com
  */
 interface UserApi {
-    fun register(@Body req:)
+//    fun register(@Body req:)
 }
