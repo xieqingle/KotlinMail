@@ -31,7 +31,7 @@ class UserCenterActivity : BaseMvpActivity<RegisterPresenter>(), RegisterView {
     }
 
     private fun initInject() {
-        DaggerUserComponent.builder().build().inject(this)
+        DaggerUserComponent.builder().activityComponent(activityComponent).build().inject(this)
         mPresenter.mView = this
     }
 }

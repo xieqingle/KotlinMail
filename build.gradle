@@ -3,12 +3,13 @@
 buildscript {
     ext.kotlin_version = '1.2.41'
     ext.android_support_version = "27.1.1"
-    ext.anko_version='0.10.5'
-    ext.rxKotlin='2.2.0'
-    ext.rxAndroid='2.0.2'
-    ext.retrofit='2.4.0'
-    ext.okhttp='3.10.0'
+    ext.anko_version = '0.10.5'
+    ext.rxKotlin = '2.2.0'
+    ext.rxAndroid = '2.0.2'
+    ext.retrofit = '2.4.0'
+    ext.okhttp = '3.10.0'
     ext.dagger_version = '2.16'
+    ext.rxLifecycler_version = '2.2.1'
 
 
     repositories {

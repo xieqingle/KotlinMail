@@ -1,6 +1,7 @@
 package cn.cestco.baselibrary.injection.module
 
 import android.app.Activity
+import cn.cestco.baselibrary.common.BaseApplication.Companion.context
 import cn.cestco.baselibrary.injection.ActivityScope
 import dagger.Module
 import dagger.Provides
@@ -11,10 +12,11 @@ import javax.inject.Singleton
  * 邮箱：qingle6616@sina.com
  */
 @Module
-class ActivityModule(private val context: Activity) {
+class ActivityModule(private val activity: Activity) {
     @ActivityScope
     @Provides
-    fun providersContext(): Activity {
-        return context
+    fun providerActivity(): Activity {
+        return activity
     }
+
 }
